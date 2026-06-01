@@ -2,269 +2,1071 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RQDA - 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
-    <link rel="stylesheet" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RQDA - 2026</title>
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+                rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+        <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-left">
-            <div class="logo-mark">C</div>
-            <div>
-                <div class="header-title">RDQA: Relatório Detalhado do Quadrimestre Anterior 2026</div>
-                <div class="header-sub">Diretrizes, Objetivos, Metas e Indicadores · Itaúna MG</div>
-            </div>
-        </div>
-        <div class="header-badge">📋 Secretária Municipal de Saúde</div>
-    </header>
+        <!-- HEADER -->
+        <header class="header">
+                <div class="header-left">
+                        <div class="logo-mark">C</div>
+                        <div>
+                                <div class="header-title">RDQA: RELATÓRIO DO QUADRIMESTRE ANTERIOR - 2026</div>
+                                <div class="header-sub">DIRETRIZES, OBJETIVOS, METAS E INDICADORES ° ITAÚNA MG</div>
+                        </div>
+                </div>
+                <div class="header-badge">📋 SECRETÁRIA MUNICIPAL DE SAÚDE</div>
+        </header>
 
-    <!-- KPIs -->
-    <section class="kpi-grid">
-        <div class="kpi-card">
-            <div class="kpi-icon-wrap icon-uv">🎯</div>
-            <div class="kpi-body">
-                <div class="kpi-value val-uv">30</div>
-                <div class="kpi-label">Diretrizes</div>
-            </div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-icon-wrap icon-teal">📌</div>
-            <div class="kpi-body">
-                <div class="kpi-value val-teal">77</div>
-                <div class="kpi-label">Objetivos</div>
-            </div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-icon-wrap icon-pink">📊</div>
-            <div class="kpi-body">
-                <div class="kpi-value val-pink">298</div>
-                <div class="kpi-label">Indicadores</div>
-            </div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-icon-wrap icon-amber">🏥</div>
-            <div class="kpi-body">
-                <div class="kpi-value val-amber">15</div>
-                <div class="kpi-label">Gerências</div>
-            </div>
-        </div>
-    </section>
+        <!-- KPIs -->
+        <section class="kpi-grid">
+                <div class="kpi-card">
+                        <div class="kpi-icon-wrap icon-uv">🎯</div>
+                        <div class="kpi-body">
+                                <div class="kpi-value val-uv">30</div>
+                                <div class="kpi-label">Diretrizes</div>
+                        </div>
+                </div>
+                <div class="kpi-card">
+                        <div class="kpi-icon-wrap icon-teal">📌</div>
+                        <div class="kpi-body">
+                                <div class="kpi-value val-teal">77</div>
+                                <div class="kpi-label">Objetivos</div>
+                        </div>
+                </div>
+                <div class="kpi-card">
+                        <div class="kpi-icon-wrap icon-pink">📊</div>
+                        <div class="kpi-body">
+                                <div class="kpi-value val-pink">298</div>
+                                <div class="kpi-label">Indicadores</div>
+                        </div>
+                </div>
+                <div class="kpi-card">
+                        <div class="kpi-icon-wrap icon-amber">🏥</div>
+                        <div class="kpi-body">
+                                <div class="kpi-value val-amber">15</div>
+                                <div class="kpi-label">Gerências</div>
+                        </div>
+                </div>
+        </section>
 
-    <!-- MAIN GRID: Chart + Diretrizes -->
-    <div class="main-grid">
+        <!-- MAIN GRID: Chart + Diretrizes -->
+        <div class="main-grid">
 
-        <div class="sec-card">
-            <div class="sec-title"><span class="sec-title-dot"></span>Principais Metas</div>
-            <div class="chart-wrap">
-                <canvas id="chartGerencia"></canvas>
-            </div>
-            <div class="legend">
-                <span><span class="legend-dot" style="background:#00c8b4;"></span>Metas principais</span>
-                <span><span class="legend-dot" style="background:#f5a623;"></span>Metas secundárias</span>
-            </div>
-        </div>
+                <div class="sec-card">
+                        <div class="sec-title"><span class="sec-title-dot"></span>Principais Metas</div>
+                        <div class="chart-wrap">
+                                <canvas id="chartGerencia"></canvas>
+                        </div>
+                        <div class="legend">
+                                <span><span class="legend-dot" style="background:#00c8b4;"></span>Metas
+                                        principais</span>
+                                <span><span class="legend-dot" style="background:#f5a623;"></span>Metas
+                                        secundárias</span>
+                        </div>
+                </div>
 
-        <div class="sec-card" style="overflow:hidden;">
-            <div class="sec-title"><span class="sec-title-dot"></span>Diretrizes Municipais</div>
-            <div class="dir-list">
-                <div class="dir-item"><span class="dir-num">D1</span><span class="dir-text">Ampliar o acesso, a
-                        qualidade e a resolubilidade da atenção especializada</span></div>
-                <div class="dir-item"><span class="dir-num">D2</span><span class="dir-text">Fortalecer a atenção
-                        domiciliar como estratégia de cuidado continuado</span></div>
-                <div class="dir-item"><span class="dir-num">D3</span><span class="dir-text">Ampliar ações de prevenção,
-                        diagnóstico e cuidado em saúde pública</span></div>
-                <div class="dir-item"><span class="dir-num">D4</span><span class="dir-text">Promover o cuidado
-                        humanizado às pessoas com estomia</span></div>
-                <div class="dir-item"><span class="dir-num">D5</span><span class="dir-text">Aprimorar a qualidade e
-                        gestão do diagnóstico laboratorial</span></div>
-                <div class="dir-item"><span class="dir-num">D6</span><span class="dir-text">Melhorar a infraestrutura
-                        dos serviços de atenção especializada</span></div>
-                <div class="dir-item"><span class="dir-num">D7</span><span class="dir-text">Qualificar a Assistência
-                        Farmacêutica no município</span></div>
-                <div class="dir-item"><span class="dir-num">D8</span><span class="dir-text">Fortalecer a atenção
-                        odontológica na atenção primária e especializada</span></div>
-                <div class="dir-item"><span class="dir-num">D9</span><span class="dir-text">Ampliar e qualificar a Rede
-                        de Atenção Psicossocial (RAPS)</span></div>
-                <div class="dir-item"><span class="dir-num">D10</span><span class="dir-text">Fortalecer a qualificação
-                        permanente da RAPS</span></div>
-                <div class="dir-item"><span class="dir-num">D11</span><span class="dir-text">Ampliar o cuidado
-                        territorial e integração saúde mental com APS</span></div>
-                <div class="dir-item"><span class="dir-num">D12</span><span class="dir-text">Valorizar a saúde mental
-                        dos trabalhadores da rede pública</span></div>
-                <div class="dir-item"><span class="dir-num">D13</span><span class="dir-text">Promover comunicação,
-                        convivência e participação social em saúde mental</span></div>
-                <div class="dir-item"><span class="dir-num">D14</span><span class="dir-text">Qualificar a gestão do
-                        Ambulatório de Atenção Especializada (AAE)</span></div>
-                <div class="dir-item"><span class="dir-num">D15</span><span class="dir-text">Estruturar e ampliar as
-                        linhas de cuidado do AAE</span></div>
-                <div class="dir-item"><span class="dir-num">D16</span><span class="dir-text">Garantir acesso equitativo
-                        e regionalizado ao AAE</span></div>
-                <div class="dir-item"><span class="dir-num">D17</span><span class="dir-text">Implementar o processo de
-                        Organização da Oferta de Cuidados Integrados</span></div>
-                <div class="dir-item"><span class="dir-num">D18</span><span class="dir-text">Fortalecer a saúde
-                        ambiental e vigilância de desastres</span></div>
-                <div class="dir-item"><span class="dir-num">D19</span><span class="dir-text">Fortalecer a vigilância de
-                        zoonoses, arboviroses e saúde animal</span></div>
-                <div class="dir-item"><span class="dir-num">D20</span><span class="dir-text">Estruturar a vigilância
-                        laboratorial e regional</span></div>
-                <div class="dir-item"><span class="dir-num">D21</span><span class="dir-text">Garantir notificação,
-                        investigação e registro de agravos e doenças</span></div>
-                <div class="dir-item"><span class="dir-num">D22</span><span class="dir-text">Garantir alta cobertura
-                        vacinal e monitoramento de imunizações</span></div>
-                <div class="dir-item"><span class="dir-num">D23</span><span class="dir-text">Implementar ações de
-                        educação e comunicação em saúde</span></div>
-                <div class="dir-item"><span class="dir-num">D24</span><span class="dir-text">Fortalecer protocolos e
-                        gestão da vigilância epidemiológica</span></div>
-                <div class="dir-item"><span class="dir-num">D25</span><span class="dir-text">Fortalecer a estrutura da
-                        Vigilância Sanitária Municipal</span></div>
-                <div class="dir-item"><span class="dir-num">D26</span><span class="dir-text">Garantir transporte
-                        sanitário eficiente, seguro e humanizado</span></div>
-                <div class="dir-item"><span class="dir-num">D27</span><span class="dir-text">Fortalecer a regulação,
-                        auditoria e gestão eficiente dos recursos</span></div>
-                <div class="dir-item"><span class="dir-num">D28</span><span class="dir-text">Fortalecer a Atenção
-                        Primária à Saúde e a promoção da saúde</span></div>
-                <div class="dir-item"><span class="dir-num">D29</span><span class="dir-text">Promoção do desenvolvimento
-                        e valorização dos servidores municipais</span></div>
-                <div class="dir-item"><span class="dir-num">D30</span><span class="dir-text">Fortalecer a integração
-                        ensino-serviço para qualificação profissional</span></div>
-            </div>
-        </div>
-    </div>
+                <div class="sec-card" style="overflow:hidden;">
+                        <div class="sec-title"><span class="sec-title-dot"></span>Diretrizes Municipais</div>
+                        <div class="dir-list">
+                                <div class="dir-item"><span class="dir-num">D1</span><span class="dir-text">Ampliar o
+                                                acesso, a qualidade e a resolubilidade da atenção especializada</span>
+                                </div>
+                                <div class="dir-item"><span class="dir-num">D2</span><span class="dir-text">Fortalecer a
+                                                atenção domiciliar como estratégia de cuidado continuado</span></div>
+                                <div class="dir-item"><span class="dir-num">D3</span><span class="dir-text">Ampliar
+                                                ações de prevenção, diagnóstico e cuidado em saúde pública</span></div>
+                                <div class="dir-item"><span class="dir-num">D4</span><span class="dir-text">Promover o
+                                                cuidado humanizado às pessoas com estomia</span></div>
+                                <div class="dir-item"><span class="dir-num">D5</span><span class="dir-text">Aprimorar a
+                                                qualidade e gestão do diagnóstico laboratorial</span></div>
+                                <div class="dir-item"><span class="dir-num">D6</span><span class="dir-text">Melhorar a
+                                                infraestrutura dos serviços de atenção especializada</span></div>
+                                <div class="dir-item"><span class="dir-num">D7</span><span class="dir-text">Qualificar a
+                                                Assistência Farmacêutica no município</span></div>
+                                <div class="dir-item"><span class="dir-num">D8</span><span class="dir-text">Fortalecer a
+                                                atenção odontológica na atenção primária e especializada</span></div>
+                                <div class="dir-item"><span class="dir-num">D9</span><span class="dir-text">Ampliar e
+                                                qualificar a Rede de Atenção Psicossocial (RAPS)</span></div>
+                                <div class="dir-item"><span class="dir-num">D10</span><span class="dir-text">Fortalecer
+                                                a qualificação permanente da RAPS</span></div>
+                                <div class="dir-item"><span class="dir-num">D11</span><span class="dir-text">Ampliar o
+                                                cuidado territorial e integração saúde mental com APS</span></div>
+                                <div class="dir-item"><span class="dir-num">D12</span><span class="dir-text">Valorizar a
+                                                saúde mental dos trabalhadores da rede pública</span></div>
+                                <div class="dir-item"><span class="dir-num">D13</span><span class="dir-text">Promover
+                                                comunicação, convivência e participação social em saúde mental</span>
+                                </div>
+                                <div class="dir-item"><span class="dir-num">D14</span><span class="dir-text">Qualificar
+                                                a gestão do Ambulatório de Atenção Especializada (AAE)</span></div>
+                                <div class="dir-item"><span class="dir-num">D15</span><span class="dir-text">Estruturar
+                                                e ampliar as linhas de cuidado do AAE</span></div>
+                                <div class="dir-item"><span class="dir-num">D16</span><span class="dir-text">Garantir
+                                                acesso equitativo e regionalizado ao AAE</span></div>
+                                <div class="dir-item"><span class="dir-num">D17</span><span class="dir-text">Implementar
+                                                o processo de Organização da Oferta de Cuidados Integrados</span></div>
+                                <div class="dir-item"><span class="dir-num">D18</span><span class="dir-text">Fortalecer
+                                                a saúde ambiental e vigilância de desastres</span></div>
+                                <div class="dir-item"><span class="dir-num">D19</span><span class="dir-text">Fortalecer
+                                                a vigilância de zoonoses, arboviroses e saúde animal</span></div>
+                                <div class="dir-item"><span class="dir-num">D20</span><span class="dir-text">Estruturar
+                                                a vigilância laboratorial e regional</span></div>
+                                <div class="dir-item"><span class="dir-num">D21</span><span class="dir-text">Garantir
+                                                notificação, investigação e registro de agravos e doenças</span></div>
+                                <div class="dir-item"><span class="dir-num">D22</span><span class="dir-text">Garantir
+                                                alta cobertura vacinal e monitoramento de imunizações</span></div>
+                                <div class="dir-item"><span class="dir-num">D23</span><span class="dir-text">Implementar
+                                                ações de educação e comunicação em saúde</span></div>
+                                <div class="dir-item"><span class="dir-num">D24</span><span class="dir-text">Fortalecer
+                                                protocolos e gestão da vigilância epidemiológica</span></div>
+                                <div class="dir-item"><span class="dir-num">D25</span><span class="dir-text">Fortalecer
+                                                a estrutura da Vigilância Sanitária Municipal</span></div>
+                                <div class="dir-item"><span class="dir-num">D26</span><span class="dir-text">Garantir
+                                                transporte sanitário eficiente, seguro e humanizado</span></div>
+                                <div class="dir-item"><span class="dir-num">D27</span><span class="dir-text">Fortalecer
+                                                a regulação, auditoria e gestão eficiente dos recursos</span></div>
+                                <div class="dir-item"><span class="dir-num">D28</span><span class="dir-text">Fortalecer
+                                                a Atenção Primária à Saúde e a promoção da saúde</span></div>
+                                <div class="dir-item"><span class="dir-num">D29</span><span class="dir-text">Promoção do
+                                                desenvolvimento e valorização dos servidores municipais</span></div>
+                                <div class="dir-item"><span class="dir-num">D30</span><span class="dir-text">Fortalecer
+                                                a integração ensino-serviço para qualificação profissional</span></div>
 
-    <!-- BOTTOM GRID: Objetivos + Indicadores -->
-    <div class="bottom-grid">
-
-        <div class="sec-card">
-            <div class="sec-title"><span class="sec-title-dot"></span>Objetivos</div>
-            <div class="obj-list">
-                <div class="obj-item"><span class="obj-tag tag-uv">1.1</span><span class="obj-text">Expandir a oferta e
-                        reduzir o tempo de espera para consultas e exames especializados</span></div>
-                <div class="obj-item"><span class="obj-tag tag-teal">2.1</span><span class="obj-text">Ampliar a
-                        cobertura e a capacidade resolutiva do SAD</span></div>
-                <div class="obj-item"><span class="obj-tag tag-pink">3.1</span><span class="obj-text">Fortalecer o
-                        diagnóstico precoce e a prevenção das ISTs</span></div>
-                <div class="obj-item"><span class="obj-tag tag-amber">5.1</span><span class="obj-text">Qualificar
-                        processos, protocolos e tecnologia no laboratório de análises clínicas</span></div>
-                <div class="obj-item"><span class="obj-tag tag-blue">7.1</span><span class="obj-text">Estruturar e
-                        descentralizar os serviços de assistência farmacêutica</span></div>
-                <div class="obj-item"><span class="obj-tag tag-uv">8.3</span><span class="obj-text">Garantir acesso e
-                        ampliação da oferta de procedimentos odontológicos especializados</span></div>
-                <div class="obj-item"><span class="obj-tag tag-teal">9.1</span><span class="obj-text">Garantir estrutura
-                        física adequada dos serviços de saúde mental</span></div>
-                <div class="obj-item"><span class="obj-tag tag-pink">14.1</span><span class="obj-text">Revisar e
-                        padronizar fluxos de atendimento no AAE</span></div>
-                <div class="obj-item"><span class="obj-tag tag-amber">15.1</span><span class="obj-text">Linha de cuidado
-                        Pré-Natal de Alto Risco (PNAR)</span></div>
-                <div class="obj-item"><span class="obj-tag tag-blue">15.3</span><span class="obj-text">Linha de cuidado
-                        Propedêutica de Câncer de Mama</span></div>
-                <div class="obj-item"><span class="obj-tag tag-uv">22.1</span><span class="obj-text">Cobertura vacinal
-                        em crianças de 0 a 1 ano — meta ≥95%</span></div>
-                <div class="obj-item"><span class="obj-tag tag-teal">27.1</span><span class="obj-text">Aprimorar a
-                        regulação médica e controle da PPI</span></div>
-                <div class="obj-item"><span class="obj-tag tag-pink">28.2</span><span class="obj-text">Acompanhamento
-                        contínuo da população e grupos prioritários</span></div>
-                <div class="obj-item"><span class="obj-tag tag-amber">28.3</span><span class="obj-text">Saúde
-                        materno-infantil na atenção primária</span></div>
-                <div class="obj-item"><span class="obj-tag tag-blue">28.8</span><span class="obj-text">Promoção da saúde
-                        e práticas corporais na APS</span></div>
-            </div>
+                        </div>
+                </div>
         </div>
 
-        <div class="sec-card">
-            <div class="sec-title"><span class="sec-title-dot"></span>Indicadores</div>
-            <div class="ind-grid">
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">1.1.1</span><span class="ind-text">Nº de
-                        especialidades com tempo médio de espera abaixo de 30 dias</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">1.1.3</span><span class="ind-text">Tempo médio de
-                        espera para consultas especializadas</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">1.2.2</span><span class="ind-text">Nº de
-                        especialidades com absenteísmo ≤ 5%</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">2.1.3</span><span class="ind-text">Número de
-                        pacientes ativos no SAD</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">2.1.4</span><span class="ind-text">% de usuários
-                        do SAD procedentes de hospitais e urgência</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">3.1.3</span><span class="ind-text">Percentual de
-                        atendimento de pacientes em uso de PrEP</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">7.1.3</span><span class="ind-text">Número de
-                        farmácias satélites implantadas</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">7.2.2</span><span class="ind-text">Percentual de
-                        medicamentos padronizados disponíveis</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">9.2.1</span><span class="ind-text">Valor de
-                        Repasse do CAPS III</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">21.1.7</span><span class="ind-text">Taxa de
-                        detecção de HIV por 100 mil habitantes</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">22.1.1</span><span class="ind-text">Taxa de
-                        incidência de tuberculose em crianças &lt;1 ano</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">27.1.3</span><span class="ind-text">Teto MAC —
-                        controle do teto financeiro M/A Complexidade</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">28.1.3</span><span class="ind-text">Nota da
-                        pesquisa de Satisfação na APS</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">28.3.1</span><span class="ind-text">Taxa de
-                        Mortalidade Infantil</span>
-                </div>
-                <div class="ind-item">
-                    <div class="ind-dot"></div><span class="ind-code">28.6.1</span><span class="ind-text">Taxa de
-                        incidência de câncer de colo do útero por 100 mil</span>
-                </div>
-            </div>
-        </div>
-    </div>
+        <!-- BOTTOM GRID: Objetivos + Indicadores -->
+        <div class="bottom-grid">
 
-    <!-- CHARTS: Metas Batidas (full width) -->
-    <div style="margin-bottom:20px;">
-        <div class="sec-card">
-            <div class="sec-title"><span class="sec-title-dot"></span>Metas Batidas por Gerência</div>
-            <div style="position:relative; height:300px;">
-                <canvas id="chartMetas"></canvas>
-            </div>
-            <div class="legend" style="margin-top:14px;">
-                <span><span class="legend-dot" style="background:#22c55e;"></span>≥ 75% — Meta atingida</span>
-                <span><span class="legend-dot" style="background:#aff709;"></span>50–74% — Em progresso</span>
-                <span><span class="legend-dot" style="background:#ef4444;"></span>&lt; 50% — Abaixo da meta</span>
-            </div>
-        </div>
-    </div>
+                <div class="sec-card">
+                        <div class="sec-title"><span class="sec-title-dot"></span>Objetivos</div>
+                        <div class="obj-list">
+                                <div class="obj-item"><span class="obj-tag tag-uv">1.1</span><span
+                                                class="obj-text">Expandir a oferta e
+                                                reduzir o tempo de espera para consultas e exames especializados</span>
+                                </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="footer-logo">🏥 Cemo Dr. Ovídio - Secretária Municipal de Saúde - Itaúna Mg</div>
-        <div class="footer-info">RQDA - 2026</div>
-    </footer>
-    <script src="script.js"></script>
+                                <div class="obj-item"><span class="obj-tag tag-uv">1.2</span><span
+                                                class="obj-text">Fortalecer a organização e a eficiência do cuidado
+                                                especializado</span></div>
+                                <div class="obj-item"><span class="obj-tag tag-uv">1.3</span><span
+                                                class="obj-text">Qualificar o acolhimento e a experiência do usuário na
+                                                atenção especializada</span></div>
+
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-teal">2.1</span><span
+                                                class="obj-text">Ampliar a
+                                                cobertura e a capacidade resolutiva do SAD</span></div>
+                                <div class="obj-item"><span class="obj-tag tag-pink">3.1</span><span
+                                                class="obj-text">Fortalecer o
+                                                diagnóstico precoce e a prevenção das ISTs</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">4.1</span><span
+                                                class="obj-text">Reestruturar e qualificar o serviço de atenção à pessoa
+                                                com estomia (SASPO)</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-amber">5.1</span><span
+                                                class="obj-text">Qualificar
+                                                processos, protocolos e tecnologia no laboratório de análises
+                                                clínicas</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">6.1</span><span
+                                                class="obj-text">Reestruturar fisicamente o CEMO para melhor
+                                                acolhimento, acesso e qualidade do atendimento</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-blue">7.1</span><span
+                                                class="obj-text">Estruturar e
+                                                descentralizar os serviços de assistência farmacêutica</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">7.2</span><span
+                                                class="obj-text">Garantir a disponibilidade de medicamentos e a gestão
+                                                qualificada do uso racional</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">8.1</span><span
+                                                class="obj-text">Qualificar os profissionais da equipe odontológica por
+                                                meio de capacitação e matriciamento</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">8.2</span><span
+                                                class="obj-text">Melhorar a infraestrutura e a informatização dos
+                                                serviços odontológicos</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">8.3</span><span
+                                                class="obj-text">Garantir acesso e
+                                                ampliação da oferta de procedimentos odontológicos especializados</span>
+                                </div>
+                                <div class="obj-item"><span class="obj-tag tag-teal">9.1</span><span
+                                                class="obj-text">Garantir estrutura
+                                                física adequada dos serviços de saúde mental</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">9.2</span><span
+                                                class="obj-text">Assegurar equipes técnicas mínimas para funcionamento
+                                                dos serviços</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">9.3</span><span
+                                                class="obj-text">Expansão da Rede de Saúde Mental</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">9.4</span><span
+                                                class="obj-text">Ampliar o acesso aos serviços de saúde mental em
+                                                horários alternativos</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">10.1</span><span
+                                                class="obj-text">Promover formação continuada para profissionais da
+                                                saúde metal</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">10.2</span><span
+                                                class="obj-text">Estimular a integração entre RAPS e APS</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">10.3</span><span
+                                                class="obj-text">Ampliar a formação intersetorial em saúde mental</span>
+                                </div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">11.1</span><span
+                                                class="obj-text">Favorecer e descentralização dos atendimentos para a
+                                                APS</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">11.2</span><span
+                                                class="obj-text">Garantir acompanhamento dos caos no território e das
+                                                famílias</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">12.1</span><span
+                                                class="obj-text">Implantar programa de atenção e cuidado em saúde mental
+                                                para trabalhadores da saúde</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">12.2</span><span
+                                                class="obj-text">Reforçar a rede de apoio multiprofissional aos
+                                                servidores</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">13.1</span><span
+                                                class="obj-text">Ampliar a visibilidade e a divulgação dos serviços de
+                                                saúde mental</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">13.2</span><span
+                                                class="obj-text">Favorecer atividades de convivência comunitária e
+                                                fortalecimento de vínculos</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">14.1</span><span
+                                                class="obj-text">Revisar e
+                                                padronizar fluxos de atendimento no AAE</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">14.2</span><span
+                                                class="obj-text">Garantir equipe mínima para funcionamento do AAE</span>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-amber">15.1</span><span
+                                                class="obj-text">Linha de cuidado Pré-Natal de Alto Risco (PNAR)</span>
+                                </div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">15.2</span><span
+                                                class="obj-text">Linha de cuidado criança de alto risco</span></div>
+
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-blue">15.3</span><span
+                                                class="obj-text">Linha de cuidado
+                                                Propedêutica de Câncer de Mama</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">15.4</span><span
+                                                class="obj-text">Linha de cuidado propedêutica de câncer uterino</span>
+                                </div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">15.5</span><span
+                                                class="obj-text">Linha de cuidado Hiperdia - Hipertensos e
+                                                Diabéticos</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">15.5</span><span
+                                                class="obj-text">Linha de cuidado Hiperdia - Hipertensos e
+                                                Diabéticos</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">16.1</span><span
+                                                class="obj-text">Ofertar consultas especializadas aos municípios da
+                                                micro de Itaúna</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">17.1</span><span
+                                                class="obj-text">Estrutura o processo de OCI no AAE</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">17.2</span><span
+                                                class="obj-text">Qualificar a equipe executora de OCI</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">18.1</span><span
+                                                class="obj-text">Monitorar e responder a situações de risco relacionadas
+                                                a desastres naturais e acidentes ambientais</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">18.2</span><span
+                                                class="obj-text">Qualificar o monitoramento da água e abastecimento no
+                                                município</span></div>
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">18.3</span><span
+                                                class="obj-text">Garantir a capacitação e estrutura para a equipe de
+                                                vigilância ambiental</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">18.4</span><span
+                                                class="obj-text">Monitorar e gerenciar barragens de mineração e de água
+                                                no município</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">19.1</span><span
+                                                class="obj-text">Promover ações de prevenção e controle das zoonoses e
+                                                arboviroses</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">19.2</span><span
+                                                class="obj-text">Garantir a continuidade e ampliação das políticas de
+                                                bem-estar animal</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">19.3</span><span
+                                                class="obj-text">Monitorar e qualificar o atendimento às zoonoses no
+                                                município</span></div>
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">20.1</span><span
+                                                class="obj-text">Fortalecer a estrutura laboratorial de vigilância
+                                                ambiental</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">21.1</span><span
+                                                class="obj-text">Notificação e registro de doenças de notificação
+                                                compulsória</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">21.2</span><span
+                                                class="obj-item">Investigação de óbitos e eventos relevantes</span>
+                                </div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">21.3</span><span
+                                                class="obj-item">Investigação e monitoramento de doenças exantemáticas e
+                                                outros agravos</span></div>
+
+
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">22.1</span><span
+                                                class="obj-text">Cobertura vacinal
+                                                em crianças de 0 a 1 ano — meta ≥95%</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">22.2</span><span
+                                                class="obj-text">Cobertura vacinal em crianças de 1 a 2 anos</span>
+                                </div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">22.3</span><span
+                                                class="obj-text">Monitoramento e registro das vacinas aplicadas</span>
+                                </div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">23.1</span><span
+                                                class="obj-text">Educação em saúde em escolas e empresas</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">23.2</span><span
+                                                class="obj-text">Mobilização social e campanhas de prevenção</span>
+                                </div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">24.1</span><span
+                                                class="obj-text">Protocolo e monitoramento conjunto</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">24.2</span><span
+                                                class="obj-text">Produção e divulgação de informações
+                                                epidemiológicas</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">25.1</span><span
+                                                class="obj-text">Implantação e qualificar sistemas e ferramentas
+                                                digitais da Vigilância Sanitária</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">25.2</span><span
+                                                class="obj-text">Ampliar e qualificar as ações de licenciamento,
+                                                fiscalização e inspeção</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">25.3</span><span
+                                                class="obj-text">Monitoramento, controle de riscos à saúde e atendimento
+                                                a demandas externas</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">25.4</span><span
+                                                class="obj-text">Capacitação, educação em saúde e articulação
+                                                institucional</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">26.1</span><span
+                                                class="obj-text">Qualificar e humanizar o atendimento dos profissionais
+                                                envolvidos no transporte sanitário</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">26.2</span><span
+                                                class="obj-text">Modernizar e ampliar a frota de veículos para
+                                                transporte sanitário</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">26.3</span><span
+                                                class="obj-text">Garantir o controle e a gestão eficiente do transporte
+                                                sanitário e TFD</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-teal">27.1</span><span
+                                                class="obj-text">Aprimorar a
+                                                regulação médica e controle da PPI</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">27.2</span><span
+                                                class="obj-text">Garantir a qualidade, auditória e monitoramento dos
+                                                procedimentos, contratos e contas hospitalares</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">27.3</span><span
+                                                class="obj-text">Capacitar os profissionais envolvidos nos processos de
+                                                regulação para qualificar a gestão clínica e operacional</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">27.4</span><span
+                                                class="obj-text">Melhorar a resolubilidade e a efiência dos serviços
+                                                hospitalares de média e alta complexidade na microrregião e
+                                                macrorregião</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-uv">28.1</span><span
+                                                class="obj-text">Digitalização, inovação e capacitação na APS</span>
+                                </div>
+
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.2</span><span
+                                                class="obj-text">Acompanhamento
+                                                contínuo da população e grupos prioritários</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.3</span><span
+                                                class="obj-text">Saúde
+                                                materno-infantil na atenção primária</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.4</span><span
+                                                class="obj-text">Atenção ao adulto com doenças crônicas</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.5</span><span
+                                                class="obj-text">Atenção ao idoso</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.6</span><span
+                                                class="obj-text">Saúde da mulher e prevenção de câncer</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.7</span><span
+                                                class="obj-text">Atenção odontológica</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.8</span><span
+                                                class="obj-text">Promoção da saúde e práticas corporais na APS</span>
+                                </div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.9</span><span
+                                                class="obj-text">Promoção da saúde e práticas corporais</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.9</span><span
+                                                class="obj-text">Prevenção do tabagismo</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.10</span><span
+                                                class="obj-text">Expansão da APS e infraestrutura</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">28.11</span><span
+                                                class="obj-text">Coberturas vacinais na APS</span></div>
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">29.1</span><span
+                                                class="obj-text">Implementar ações que fortaleçam a qualidade de vida,
+                                                capacitação e progressão na carreira dos servidores</span></div>
+
+
+                                <div class="obj-item"><span class="obj-tag tag-pink">30.1</span><span
+                                                class="obj-text">Ampliar número de instituições</span></div>
+                        </div>
+
+
+                </div>
+
+                <div class="sec-card">
+                        <div class="sec-title"><span class="sec-title-dot"></span>Indicadores</div>
+                        <div class="ind-grid">
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.1</span><span
+                                                class="ind-text">Número de especialidades com tempo médio de espera
+                                                abaixo de 30 dias</span>
+                                </div>
+
+                                <div class="ind-grid">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.2</span><span
+                                                class="ind-text">Tipos de exames executados com tempo médio de espera
+                                                abaixo de 30 dias</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.3</span><span
+                                                class="ind-text">Tempo médio de espera para consultas
+                                                especializadas</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.4</span><span
+                                                class="ind-text">Média de idade dos educandos diagnosticados com
+                                                alterações auditivas</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.5</span><span
+                                                class="ind-text">Quantidade de consultas realizadas por
+                                                otorrinolaringologista pelo Miguilim</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.6</span><span
+                                                class="ind-text">Absenteísmo em consultas com oftalmo no Miguilim</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.7</span><span
+                                                class="ind-text">Percentual de consultas com encaminhamento para exames
+                                                oftalmológicos complementares</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.8</span><span
+                                                class="ind-text">Estudo realizado</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.9</span><span
+                                                class="ind-text">Tempo médio de espera para consultas
+                                                especializadas</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.10</span><span
+                                                class="ind-text">Quantidade de testes do pezinho e do olhinho
+                                                realizados</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.1.11</span><span
+                                                class="ind-text">Percentual de adesão ao uso do PEC</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.2.2</span><span
+                                                class="ind-text">Número de especialidades com absenteísmo de 5%</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.2.3</span><span
+                                                class="ind-text">Percentual de adesão ao uso de agenda
+                                                informatizada</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.2.4</span><span
+                                                class="ind-text">Sistema de telemedicina implantado e operante</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.2.5</span><span
+                                                class="ind-text">Sistema de teleradiologia implantado e operante</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.2.6</span><span
+                                                class="ind-text">Percentual de adesão ao uso do PEC</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.3.1</span><span
+                                                class="ind-text">Nota média de pesquisa de satisfação realizada</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">1.3.2</span><span
+                                                class="ind-text">Nota média de pesquisada de satisfação</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">2.1.1</span><span
+                                                class="ind-text">Nova equipe implantada e em funcionamento</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">2.1.2</span><span
+                                                class="ind-text">EMAP implantada e integrada ao SAD</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">2.1.3</span><span
+                                                class="ind-text">Número de pacientes ativos no SAD</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">2.1.4</span><span
+                                                class="ind-text">Percentual de usuários do SAD procedentes de hospitais
+                                                e de serviços de urgência</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">2.1.5</span><span
+                                                class="ind-text">Tempo médio de permanência no SAD</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">2.1.6</span><span
+                                                class="ind-text">Tempo médio de permanência no SAD</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">3.1.1</span><span
+                                                class="ind-text">Percentual de casos diagnosticados nas unidades de
+                                                saúde mental</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">3.1.2</span><span
+                                                class="ind-text">Número de participantes em atividades educativas</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">3.1.3</span><span
+                                                class="ind-text">Percentual de atendimento de pacientes em uso de
+                                                PrEP</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">3.1.4</span><span
+                                                class="ind-text">Percentual de unidades capacitadas</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">4.1.1</span><span
+                                                class="ind-text">Cartilha implementada</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">4.1.2</span><span
+                                                class="ind-text">Satisfação com médico da equipe de profissionais do
+                                                SASPO</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">4.1.3</span><span
+                                                class="ind-text">Protocolo atualizado</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">4.1.4</span><span
+                                                class="ind-text">Atividade de educação permanente semestral para Equipes
+                                                da Atenção Primária</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">4.1.5</span><span
+                                                class="ind-text">Encontros educativos semestrais realizados com pessoas
+                                                com estomias</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code ">4.1.6</span><span
+                                                class="ind-text">Acesso à primeira consulta no serviço especializado em
+                                                até 15 dias após alta hospitalar</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">5.1.1</span><span
+                                                class="ind-text">Nota da pesquisa de satisfação</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">5.1.2</span><span
+                                                class="ind-text">Nota da pesquisa de satisfação</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">5.1.3</span><span
+                                                class="ind-text">Nota da pesquisa de satisfação</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">5.1.4</span><span
+                                                class="ind-text">Nota da pesquisa de satisfação</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">6.1.1</span><span
+                                                class="ind-text">Reforma de estrutura do CEMO - Parte 1</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">6.1.2</span><span
+                                                class="ind-text">Reforma de estrutura do CEMO - Parte 2</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.1.1</span><span
+                                                class="ind-text">Farmacêuticos contratados</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.1.2</span><span
+                                                class="ind-text">Número de funcionários contratados</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.1.3</span><span
+                                                class="ind-text">Número de farmácias satélites implantadas</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.1.4</span><span
+                                                class="ind-text">Criação do serviço de tele atendimento de
+                                                medicamentos</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.1.5</span><span
+                                                class="ind-text">Implantação física e operacional da CAF</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.2.1</span><span
+                                                class="ind-text">Remume revisada</span>
+                                </div>
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.2.2</span><span
+                                                class="ind-text">Percentual de medicamentos padronizados
+                                                disponíveis</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">7.2.3</span><span
+                                                class="ind-text">Percentual de funcionários com 100% de adesão aos
+                                                treinamentos</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.1.1</span><span
+                                                class="ind-text">Nota da pesquisa de satisfação</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.1.2</span><span
+                                                class="ind-text">Número de especialidades com cumprimento de cotas para
+                                                a micro</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.1.3</span><span
+                                                class="ind-text">Percentual da equipe CEO treinada. Fórmula: N° de
+                                                pessoas treinadas ÷ nº total de integrantes da equipe × 100 </span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.2.1</span><span
+                                                class="ind-text">Percentual de adesão ao PEC</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.2.2</span><span
+                                                class="ind-text">POPS e protocolos definidos</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.2.3</span><span
+                                                class="ind-text">Produção e entrega de próteses mensal</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.1</span><span
+                                                class="ind-text">Produção e entrega de próteses mensal</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.2</span><span
+                                                class="ind-text">Número de pacientes da fila de endodontia</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.3</span><span
+                                                class="ind-text">Número de pacientes da fila de endodontia</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.4</span><span
+                                                class="ind-text">Número de pacientes da fila de endodontia</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.5</span><span
+                                                class="ind-text">Quantidade de procedimentos restauradores em PCD</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.6</span><span
+                                                class="ind-text">Percentual de biópsias com resultado positivo de câncer
+                                                bucal</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">8.3.7</span><span
+                                                class="ind-text">Quantidade de procedimentos restauradores em PCD</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.1.1</span><span
+                                                class="ind-text">Sede construída</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.1.2</span><span
+                                                class="ind-text">Sede construída</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.1.3</span><span
+                                                class="ind-text">Sede construída</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.2.1</span><span
+                                                class="ind-text">Valor de repasse do CAPS III</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.2.2</span><span
+                                                class="ind-text">Valor de repasse do CAPS AD</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.3.1</span><span
+                                                class="ind-text">Análise de viabilidade técnica e financeira
+                                                realizada</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.3.2</span><span
+                                                class="ind-text">Valor de repasse do CAPS II</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">9.4</span><span
+                                                class="ind-text">Número de atendimentos realizados no horário do
+                                                trabalhador no CAPS AD</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">10.1</span><span
+                                                class="ind-text">Quantidade de capacitações com a participação de pelo
+                                                menos 80% da equipe</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">10.2.1</span><span
+                                                class="ind-text">Percentual de unidades que participaram das 2
+                                                capacitações ofertadas pela Saúde Mental</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">10.2.2</span><span
+                                                class="ind-text">Percentual de participação das reuniões de
+                                                Matriciamento com os CAPS</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">10.2.3</span><span
+                                                class="ind-text">Quantidade de rodas de conversa com a participação de
+                                                pelo menos 80% da equipe</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">10.3.1</span><span
+                                                class="ind-text">Número de tentativas de auto-extermínio (TAE) até 18
+                                                anos</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">11.1.1</span><span
+                                                class="ind-text">Quantidade de casos menos graves encaminhados ao
+                                                CAPS</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">11.1.2</span><span
+                                                class="ind-text">Percentual de unidades com atendimento de psicólogos da
+                                                RAPS</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">11.2.1</span><span
+                                                class="ind-text">Quantidade de casos menos graves encaminhados ao
+                                                CAPS</span>
+                                </div>
+
+                                <div class="ind-item">
+
+                                        <div class="ind-dot"></div><span class="ind-code">12.1.1</span><span
+                                                class="ind-text">Percentual de afastamento dos trabalhadores da saúde do
+                                                município associados ao sofrimento mental</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">13.1.1</span><span
+                                                class="ind-text">Número de campanhas/divulgações dos serviços de saúde
+                                                mental em redes sociais</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">13.2.1</span><span
+                                                class="ind-text">Percentual de relatórios enviados</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">14.1.1</span><span
+                                                class="ind-text">Quantidade de fluxogramas revisados e
+                                                implantados</span>
+                                </div>
+                                -
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">14.1.2</span><span
+                                                class="ind-text">Absenteísmo no AAE</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">14.2.1</span><span
+                                                class="ind-text">Equipe mínima do núcleo regulador do AAE, composta por
+                                                um profissioanl de nível superior e um auxiliar administrativo</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">15.1.1</span><span
+                                                class="ind-text">Percentual de gestantes de alto risco com 6
+                                                consultas</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">15.1.3</span><span
+                                                class="ind-text">Valor de repasse ao AAE</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">15.1.4</span><span
+                                                class="ind-text">Percentual de gestantes de alto risco com 6
+                                                consultas</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">15.1.10</span><span
+                                                class="ind-text">Valor de repaasse ao AAE</span>
+                                </div>
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">15.2.1</span><span
+                                                class="ind-text">Percentual de crianças com 4 consultas anuais</span>
+                                </div>
+
+
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">21.1.7</span><span
+                                                class="ind-text">Taxa de
+                                                detecção de HIV por 100 mil habitantes</span>
+                                </div>
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">22.1.1</span><span
+                                                class="ind-text">Taxa de
+                                                incidência de tuberculose em crianças &lt;1 ano</span>
+                                </div>
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">27.1.3</span><span
+                                                class="ind-text">Teto MAC —
+                                                controle do teto financeiro M/A Complexidade</span>
+                                </div>
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">28.1.3</span><span
+                                                class="ind-text">Nota da
+                                                pesquisa de Satisfação na APS</span>
+                                </div>
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">28.3.1</span><span
+                                                class="ind-text">Taxa de
+                                                Mortalidade Infantil</span>
+                                </div>
+                                <div class="ind-item">
+                                        <div class="ind-dot"></div><span class="ind-code">28.6.1</span><span
+                                                class="ind-text">Taxa de
+                                                incidência de câncer de colo do útero por 100 mil</span>
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+        <!-- CHARTS: Metas Batidas (full width) -->
+        <div style="margin-bottom:20px;">
+                <div class="sec-card">
+                        <div class="sec-title"><span class="sec-title-dot"></span>Metas Batidas por Gerência</div>
+                        <div style="position:relative; height:300px;">
+                                <canvas id="chartMetas"></canvas>
+                        </div>
+                        <div class="legend" style="margin-top:14px;">
+                                <span><span class="legend-dot" style="background:#22c55e;"></span>≥ 75% — META
+                                        ATINGIDA</span>
+                                <span><span class="legend-dot" style="background:#aff709;"></span>50–74% — EM
+                                        PROGRESSO</span>
+                                <span><span class="legend-dot" style="background:#ef4444;"></span>&lt; 50% — ABAIXO DA
+                                        META</span>
+                        </div>
+                </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+                <div class="footer-logo">🏥 CEMO - SECRETÁRIA MUNICIPAL DE SAÚDE - ITAÚNA MG</div>
+                <div class="footer-info">RQDA - 2026</div>
+        </footer>
+        <script src="script.js"></script>
 </body>
 
 </html>
