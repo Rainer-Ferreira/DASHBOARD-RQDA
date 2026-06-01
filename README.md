@@ -33,6 +33,7 @@ Organização por diretrizes e objetivos
 Visualização de metas por gerência
 Layout responsivo
 Interface moderna estilo Power BI/Web App
-<img width="1905" height="943" alt="Captura de tela 2026-05-29 090614" src="https://github.com/user-attachments/assets/0b1585b8-66f1-446e-b94c-642421b99dce" />
-<img width="1902" height="773" alt="Captura de tela 2026-05-29 090625" src="https://github.com/user-attachments/assets/22c80df6-19ca-46de-85fc-f064ee245f0e" />
+<img width="1467" height="943" alt="Captura de tela 2026-06-01 151346" src="https://github.com/user-attachments/assets/5dac7020-b6c0-4d85-b8bd-367bacf55515" />
+<img width="1399" height="780" alt="Captura de tela 2026-06-01 151354" src="https://github.com/user-attachments/assets/a8affaac-a73f-4180-b88e-975a455fdb26" />
+
 
